@@ -1,3 +1,5 @@
+//In this program I have use the logic of arrays to find out the maxing number from the array.
+
 public class LargestInArray {
     public static int Largest(int number[]){
         int largest = Integer.MIN_VALUE;
