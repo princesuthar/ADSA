@@ -1,3 +1,5 @@
+//In this program i have used the concept of hashing to calculate the hash value of a give string on a give hash table..
+
 import java.util.Scanner;
 
 
