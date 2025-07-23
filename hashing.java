@@ -20,11 +20,14 @@ public class hashing{
     }
 
     public static void hashfunc(int s,String str){
+        Scanner sq = new Scanner(System.in);
+        System.out.print("Enter the value of hash table : ");
+        int n = sq.nextInt();
         
-        int j=s%10;
-        String[] hash = new String[10];
+        int j=s%n;
+        String[] hash = new String[n];
         hash[j]=str;
-        for(int i=0;i<10;i++){
+        for(int i=0;i<n;i++){
             System.out.println(i + "->"+ hash[i]);
         }
 
