@@ -1,6 +1,6 @@
 //In this code I have use the concept of Divide & conqure(Merge Sort) to sort an array in ascending order.
 
-
+import java.util.*;
 public class MergeSortArray{
 
     //printing array
@@ -62,7 +62,17 @@ public class MergeSortArray{
         }
     }
     public static void main(String[] args) {
-        int array[]={15,5,24,8,1,3,16,10,20};
+        //int array[]={15,5,24,8,1,3,16,10,20};
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the no. of elements in the Array: ");
+        int n = sc.nextInt();
+
+        int [] array;
+        array = new int[n];
+        System.out.print("Enter the elements of the array: ");
+        for (int i = 0 ; i<n ; i++){
+            array[i] = sc.nextInt();
+        }
         Mergesort(array, 0, array.length-1);
         print(array);
     }
