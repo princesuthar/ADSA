@@ -1,4 +1,7 @@
+//in this program i have use logic to print the elements of a matrix in spiral fashion..
+
 public class SpiralMatrix {
+
     public static void printspriral(int matrix[][]){
        int startRow = 0; 
        int startCol = 0;
