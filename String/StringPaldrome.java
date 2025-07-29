@@ -1,3 +1,6 @@
+//In this program i have started to learn using Strings..
+
+package git.ADSA.String;
 
 
 public class StringPaldrome {
