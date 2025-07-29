@@ -1,4 +1,5 @@
-//In this program i have used another logic for seaching the index of the element in an Array,which is binary search method.
+//In this program i have used another logic for seaching the index of the element in an Array,which is binary search method..
+//''
 
 public class BinarySearchArray {
     
