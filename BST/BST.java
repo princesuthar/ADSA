@@ -1,3 +1,4 @@
+package git.ADSA.BST;
 //In this code i have use the concept of Binary Search Tree(BST) and Performed Diff Terversal Techniques
 
 import java.util.Scanner;
@@ -21,6 +22,13 @@ public class BST {
         tree.preorder();
         System.out.print("Postorder Traversal : ");
         tree.postorder();
+
+
+        System.out.print("Enter the number to search : ");
+        int s = sc.nextInt();
+       
+        System.out.println( tree.search(s) + " the value " + s + " exists in the BST");
+        
 
 
 
@@ -103,6 +111,26 @@ public class BST {
             postorderRec(root.left);
             postorderRec(root.right);
             System.out.print(root.key + " ");
+        }
+    }
+
+    //Search
+
+    boolean search(int s){
+        return serchRec(root , s);
+    }
+
+    boolean serchRec(Node root , int s){
+        if (root == null){
+            return false;
+        }
+        if(root.key == s){
+            return true;
+        }
+        if(root.key<s){
+            return serchRec(root.right, s);
+        }else{
+            return serchRec(root.left, s);
         }
     }
 }
