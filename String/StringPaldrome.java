@@ -17,7 +17,7 @@ public class StringPaldrome {
     }
     public static void main(String[] args) {
     String str = "racecar";
-    System.out.println(palidrome(str));
+    System.out.println(palidrome(str)); 
         
     }
 

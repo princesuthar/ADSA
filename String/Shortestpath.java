@@ -28,4 +28,4 @@ public class Shortestpath {
         String str = "WNEENESENNN";
         System.out.println(shortpath(str));
     }
-}
+}   
