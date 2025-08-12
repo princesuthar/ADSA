@@ -3,16 +3,19 @@ package git.ADSA.BST;
 
 import java.util.Scanner;
 
-public class BST {
+public class BST 
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Create tree = new Create();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the No of elements in The BST : ");
         int n = sc.nextInt();
         System.out.println();
         System.out.print("Enter the elements of the BST : ");
-        for (int i = 0; i < n ; i++){
+        for (int i = 0; i < n ; i++)
+        {
             int value = sc.nextInt();
             tree.insert(value);
         }
@@ -27,7 +30,16 @@ public class BST {
         System.out.print("Enter the number to search : ");
         int s = sc.nextInt();
        
-        System.out.println( tree.search(s) + " the value " + s + " exists in the BST");
+        boolean ans = tree.search(s);
+
+        if(ans == true )
+        {
+            System.out.println(ans + " value " + s + " exist");
+        }
+        else
+        {
+            System.out.println(ans + " value " + s + " does not exist");
+        }
         
 
 
@@ -36,34 +48,43 @@ public class BST {
     }
 }
 
- class Node {
+ class Node 
+{
     int key;
     Node left , right;
-    public Node(int item){
+    public Node(int item)
+    {
         key = item;
         left = right = null;
     }
 }
 
- class Create{
+class Create
+{
     Node root;
-    public Create(){
+    public Create()
+    {
         root = null;    
     }
 
-    void insert(int key){
+    void insert(int key)
+    {
         root = insertRec(root,key);
     }
 
-    Node insertRec(Node root , int key){
-        if(root == null){
+    Node insertRec(Node root , int key)
+    {
+        if(root == null)
+        {
             root = new Node(key);
             return root;
         }
-        if(key < root.key){
+        if(key < root.key)
+        {
             root.left = insertRec(root.left, key);
         }
-        else {
+        else 
+        {
              root.right = insertRec(root.right, key);
         }
         return root;
@@ -71,13 +92,16 @@ public class BST {
 
 //Inorder
 
-    void inorder(){
+    void inorder()
+    {
         inorderRec(root);
         System.out.println("\n");
     }
 
-    void inorderRec(Node root){
-        if(root!=null){
+    void inorderRec(Node root)
+    {
+        if(root!=null)
+        {
             inorderRec(root.left);
             System.out.print(root.key + " ");
             inorderRec(root.right);
@@ -86,13 +110,16 @@ public class BST {
 
     //preorder
 
-    void preorder(){
+    void preorder()
+    {
         preorderRec(root);
         System.out.println("\n");
     }
     
-    void preorderRec(Node root){
-         if (root != null) {
+    void preorderRec(Node root)
+    {
+         if (root != null) 
+        {
             System.out.print(root.key + " ");
             preorderRec(root.left);
             preorderRec(root.right);
@@ -101,13 +128,16 @@ public class BST {
 
     //Postorder
 
-    void postorder() {
+    void postorder() 
+    {
         postorderRec(root);
         System.out.println("\n");
     }
 
-    void postorderRec(Node root) {
-        if (root != null) {
+    void postorderRec(Node root) 
+    {
+        if (root != null) 
+        {
             postorderRec(root.left);
             postorderRec(root.right);
             System.out.print(root.key + " ");
@@ -116,20 +146,27 @@ public class BST {
 
     //Search
 
-    boolean search(int s){
+    boolean search(int s)
+    {
         return serchRec(root , s);
     }
 
-    boolean serchRec(Node root , int s){
-        if (root == null){
+    boolean serchRec(Node root , int s)
+    {
+        if (root == null)
+        {
             return false;
         }
-        if(root.key == s){
+        if(root.key == s)
+        {
             return true;
         }
-        if(root.key<s){
+        if(root.key<s)
+        {
             return serchRec(root.right, s);
-        }else{
+        }
+        else
+        {
             return serchRec(root.left, s);
         }
     }
