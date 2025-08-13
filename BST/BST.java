@@ -1,4 +1,4 @@
-package git.ADSA.BST;
+
 //In this code i have use the concept of Binary Search Tree(BST) and Performed Diff Terversal Techniques
 
 import java.util.Scanner;
@@ -59,7 +59,7 @@ public class BST
     }
 }
 
-class Create
+class Create   //create
 {
     Node root;
     public Create()
@@ -90,9 +90,9 @@ class Create
         return root;
     }
 
-//Inorder
 
-    void inorder()
+
+    void inorder() //Inorder
     {
         inorderRec(root);
         System.out.println("\n");
@@ -108,9 +108,9 @@ class Create
         }
     }
 
-    //preorder
 
-    void preorder()
+
+    void preorder()     //preorder
     {
         preorderRec(root);
         System.out.println("\n");
@@ -126,10 +126,10 @@ class Create
         }
     }
 
-    //Postorder
 
-    void postorder() 
-    {
+
+    void postorder()     //Postorder
+    { 
         postorderRec(root);
         System.out.println("\n");
     }
@@ -144,9 +144,9 @@ class Create
         }
     }
 
-    //Search
 
-    boolean search(int s)
+
+    boolean search(int s)     //Search
     {
         return serchRec(root , s);
     }
