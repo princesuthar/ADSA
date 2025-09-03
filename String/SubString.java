@@ -1,4 +1,4 @@
-package git.ADSA.String;
+package String;
 
 public class SubString {
 

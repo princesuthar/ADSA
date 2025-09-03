@@ -1,5 +1,5 @@
 //in this program I have comapred the string in (lexiographic method)..
- package git.ADSA.String;
+ package String;
 public class LargestInSring {
 
     public static void main(String[] args) {
